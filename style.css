@@ -1,0 +1,92 @@
+/* Basic Reset */
+body, h1, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.img {
+    margin-top: 50px;
+    padding-top: 40px;
+    height: 300px;
+    width: 200px;
+    background: url('rounak2.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+    position: relative; /* To handle any additional pseudo-elements if needed */
+}
+
+/* Hover Effect */
+.img:hover {
+    transform: scale(1.1); /* Slightly scale the image when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow effect on hover */
+}
+
+/* Optional: Adding a subtle overlay effect on hover */
+.img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50px;
+}
+
+.img:hover::after {
+    opacity: 1; /* Display overlay on hover */
+}
+
+.img h2 {
+    color: rgb(255, 0, 0);
+    position: absolute;
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
+
+/* Container styling */
+.container {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: url(blackrounak.jpg);
+    background-size: cover;
+    background-position: center;
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(3px, 10px, 1.25rem, px5);
+    
+}
+.container h1{
+    color: rgb(154, 91, 28);
+    font-weight: 400;
+    font-size: 68px;
+}
+.love-list{
+    font-size: 20px;
+    line-height: 38px;
+    color: white;
+    margin: 30px;
+}
+@media screen and (max-width: 600px){
+    .container{
+        width: 100%;
+    }
+    .container h1{
+        font-size: 46px;
+    }
+    
+}
